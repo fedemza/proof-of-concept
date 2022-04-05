@@ -15,18 +15,18 @@ app.get('/', (req, res) => {
     res.send('Hello World')
   })
   
-app.post('/image',upload.single('imagen'), async (req, res) => {
+app.post('/image',upload.single('image'), async (req, res) => {
    
-    const imagen=req.file
-    console.log(imagen)
+    const image=req.file
+    console.log(image)
 
    try {
 
-    if(imagen.size<5242880 && imagen.mimetype==='image/jpeg' || imagen.mimetype==='image/png'  ){
+    if(image.size<5242880 && image.mimetype==='image/jpeg' || image.mimetype==='image/png'  ){
 
-        const processedImageOne = sharp(imagen.buffer)
-        const processedImageTwo = sharp(imagen.buffer)
-        const processedImageThree = sharp(imagen.buffer)
+        const processedImageOne = sharp(image.buffer)
+        const processedImageTwo = sharp(image.buffer)
+        const processedImageThree = sharp(image.buffer)
 
         const resizedImageOne = processedImageOne.resize(400, 300,{
           fit: 'fill',
@@ -53,7 +53,7 @@ app.post('/image',upload.single('imagen'), async (req, res) => {
                     resizedImageThree: resizedImageBufferThree})
           
       } else{
-          res.send('la imagen no es del tipo jpeg, png ó es mayor a 5MB')
+          res.send('la image no es del tipo jpeg, png ó es mayor a 5MB')
       }
        
    } catch (error) {
