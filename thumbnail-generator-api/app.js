@@ -66,8 +66,6 @@ app.post('/imagen',upload.single('imagen'), async (req, res) => {
   
   const  PORT  = process.env.PORT || 3000
 
-  console.log({PORT})
-
   app.listen(PORT, () => {
     console.log('Servidor escuchando en el puerto', PORT)
   } )
