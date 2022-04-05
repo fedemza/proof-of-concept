@@ -1,4 +1,4 @@
-## SetUp
+## Setup
 
 Ejecutar comando
 
