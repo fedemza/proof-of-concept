@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.send('Hello World')
   })
   
-app.post('/imagen',upload.single('imagen'), async (req, res) => {
+app.post('/image',upload.single('imagen'), async (req, res) => {
    
     const imagen=req.file
     console.log(imagen)
