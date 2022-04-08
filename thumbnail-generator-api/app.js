@@ -46,7 +46,7 @@ app.post('/image',upload.single('image'), async (req, res) => {
         fs.writeFileSync('thumbnails/thumbnailtwo.png', resizedImageBufferTwo)
         fs.writeFileSync('thumbnails/thumbnailthree.png', resizedImageBufferThree)
   
-        console.log(resizedImageBufferOne,resizedImageBufferTwo,resizedImageBufferThree)
+       // console.log(resizedImageBufferOne,resizedImageBufferTwo,resizedImageBufferThree)
   
           res.send({resizedImageOne: resizedImageBufferOne,
                     resizedImageTwo: resizedImageBufferTwo,
